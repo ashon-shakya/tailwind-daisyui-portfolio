@@ -216,24 +216,29 @@ export default function App() {
           </div>
 
           {/* Carousel */}
-          <div className="carousel rounded-box mt-2 gap-2" id="home">
-            <div className="carousel-item">
-              <img src={profile_1} alt="Burger" />
-            </div>
-            <div className="carousel-item">
-              <img src={profile_7} alt="Burger" />
-            </div>
-            <div className="carousel-item">
-              <img src={profile_6} alt="Profile 1" />
-            </div>
-            <div className="carousel-item">
-              <img src={profile_9} alt="Burger" />
-            </div>
-            <div className="carousel-item">
-              <img src={profile_4} alt="Burger" />
-            </div>
-            <div className="carousel-item">
-              <img src={profile_5} alt="Burger" />
+          <div className="px-4">
+            <div
+              className="carousel rounded-box mt-2 gap-2 shadow-md"
+              id="home"
+            >
+              <div className="carousel-item">
+                <img src={profile_1} alt="Burger" />
+              </div>
+              <div className="carousel-item">
+                <img src={profile_7} alt="Burger" />
+              </div>
+              <div className="carousel-item">
+                <img src={profile_6} alt="Profile 1" />
+              </div>
+              <div className="carousel-item">
+                <img src={profile_9} alt="Burger" />
+              </div>
+              <div className="carousel-item">
+                <img src={profile_4} alt="Burger" />
+              </div>
+              <div className="carousel-item">
+                <img src={profile_5} alt="Burger" />
+              </div>
             </div>
           </div>
 
@@ -242,7 +247,7 @@ export default function App() {
             <div className="divider  text-2xl font-bold my-10" id="skills">
               Skills
             </div>
-            <div className="stats shadow w-full">
+            <div className="stats shadow w-full flex flex-wrap sm:grid">
               <div className="stat">
                 <div className="stat-figure text-blue-700 text-6xl">
                   <FaHtml5 />
@@ -291,7 +296,7 @@ export default function App() {
           </div>
 
           {/* About */}
-          <div className="flex flex-col gap-10 items-center" id="about">
+          <div className="px-4 flex flex-col gap-10 items-center" id="about">
             <div className="hero bg-base-100 min-h-[600px] mt-10 p-20">
               <div className="hero-content flex-col lg:flex-row-reverse">
                 <img
@@ -310,6 +315,8 @@ export default function App() {
               </div>
             </div>
             <h3 className="font-bold text-2xl">Education</h3>
+
+            {/* timeline */}
             <ul className="timeline">
               <li>
                 <div className="timeline-start">2008</div>
@@ -400,6 +407,7 @@ export default function App() {
             <div className="divider  text-2xl font-bold my-10" id="project">
               Projects
             </div>
+            {/* Project list */}
             <div className="flex flex-col justify-center items-center">
               <div className="flex gap-10 p-10 flex-wrap justify-center md:justify-around">
                 <div className="card bg-base-100 max-w-80 shadow-sm">
@@ -498,32 +506,39 @@ export default function App() {
           </div>
 
           {/* Contact */}
-          <div className="hero min-h-[600px]" id="contact">
-            <div className="hero-content flex-col lg:flex-row-reverse">
-              <div className="text-center lg:text-left">
-                <h1 className="text-5xl font-bold">Contact now!</h1>
-                <p className="py-6">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
-                </p>
-              </div>
-              <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-                <div className="card-body">
-                  <fieldset className="fieldset">
-                    <label className="label">Email</label>
-                    <input type="email" className="input" placeholder="Email" />
-                    <textarea
-                      placeholder="Bio"
-                      className="textarea textarea-md"
-                    ></textarea>
+          <div className="px-4">
+            <div className="hero min-h-[600px]" id="contact">
+              <div className="hero-content flex-col lg:flex-row-reverse">
+                <div className="text-center lg:text-left">
+                  <h1 className="text-5xl font-bold">Contact now!</h1>
+                  <p className="py-6">
+                    Provident cupiditate voluptatem et in. Quaerat fugiat ut
+                    assumenda excepturi exercitationem quasi. In deleniti eaque
+                    aut repudiandae et a id nisi.
+                  </p>
+                </div>
+                <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                  <div className="card-body">
+                    <fieldset className="fieldset">
+                      <label className="label">Email</label>
+                      <input
+                        type="email"
+                        className="input"
+                        placeholder="Email"
+                      />
+                      <textarea
+                        placeholder="Message"
+                        className="textarea textarea-md"
+                      ></textarea>
 
-                    <button className="btn btn-neutral mt-4">Contact</button>
-                  </fieldset>
+                      <button className="btn btn-neutral mt-4">Contact</button>
+                    </fieldset>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
           {/* Footer */}
 
           <footer className="footer sm:footer-horizontal bg-base-300 text-base-content p-10">
