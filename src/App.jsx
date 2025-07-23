@@ -35,27 +35,70 @@ export default function App() {
         <div className="max-w-6xl mx-auto ">
           {/* Navbar */}
           <div className="navbar bg-base-100">
-            <div className="flex-1">
+            <div className="navbar-start">
+              <div className="dropdown">
+                <div
+                  tabIndex={0}
+                  role="button"
+                  className="btn btn-ghost lg:hidden"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    {" "}
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 6h16M4 12h8m-8 6h16"
+                    />{" "}
+                  </svg>
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                >
+                  <li>
+                    <a href="#home">Home</a>
+                  </li>
+                  <li>
+                    <a href="#skills">Skills</a>
+                  </li>
+                  <li>
+                    <a href="#about">About</a>
+                  </li>
+                  <li>
+                    <a href="#project">Projects</a>
+                  </li>
+
+                  <li>
+                    <a href="#project">Contact</a>
+                  </li>
+                </ul>
+              </div>
               <a className="btn btn-ghost text-xl">Portfolio</a>
             </div>
-            <div className="flex-none">
+            <div className="navbar-center hidden lg:flex">
               <ul className="menu menu-horizontal px-1">
                 <li>
                   <a href="#home">Home</a>
                 </li>
                 <li>
-                  <a href="#skills">Skills</a>
+                  <a href="#skills">Skill</a>
                 </li>
                 <li>
                   <a href="#about">About</a>
                 </li>
-
                 <li>
                   <a href="#project">Projects</a>
                 </li>
 
                 <li>
-                  <a href="#contact">Contact</a>
+                  <a href="#project">Contact</a>
                 </li>
               </ul>
             </div>
@@ -195,53 +238,55 @@ export default function App() {
           </div>
 
           {/* stats */}
-          <div className="divider  text-2xl font-bold my-10" id="skills">
-            Skills
-          </div>
-          <div className="stats shadow w-full">
-            <div className="stat">
-              <div className="stat-figure text-blue-700 text-6xl">
-                <FaHtml5 />
-              </div>
-              <div className="stat-title">Core HTML</div>
-              <div className="stat-value text-blue-700">HTML</div>
-              <div className="stat-desc">Markup Master</div>
+          <div className="px-4">
+            <div className="divider  text-2xl font-bold my-10" id="skills">
+              Skills
             </div>
-
-            <div className="stat">
-              <div className="stat-figure text-pink-500 text-6xl">
-                <FaCss3Alt />
+            <div className="stats shadow w-full">
+              <div className="stat">
+                <div className="stat-figure text-blue-700 text-6xl">
+                  <FaHtml5 />
+                </div>
+                <div className="stat-title">Core HTML</div>
+                <div className="stat-value text-blue-700">HTML</div>
+                <div className="stat-desc">Markup Master</div>
               </div>
-              <div className="stat-title">Styling CSS</div>
-              <div className="stat-value text-pink-500">CSS</div>
-              <div className="stat-desc">Design Precision</div>
-            </div>
 
-            <div className="stat">
-              <div className="stat-figure text-yellow-400 text-6xl">
-                <RiJavascriptFill />
+              <div className="stat">
+                <div className="stat-figure text-pink-500 text-6xl">
+                  <FaCss3Alt />
+                </div>
+                <div className="stat-title">Styling CSS</div>
+                <div className="stat-value text-pink-500">CSS</div>
+                <div className="stat-desc">Design Precision</div>
               </div>
-              <div className="stat-title">JavaScript</div>
-              <div className="stat-value text-yellow-400">JS</div>
-              <div className="stat-desc">Code Fluency</div>
-            </div>
 
-            <div className="stat">
-              <div className="stat-figure text-green-400 text-6xl">
-                <FaNode />
+              <div className="stat">
+                <div className="stat-figure text-yellow-400 text-6xl">
+                  <RiJavascriptFill />
+                </div>
+                <div className="stat-title">JavaScript</div>
+                <div className="stat-value text-yellow-400">JS</div>
+                <div className="stat-desc">Code Fluency</div>
               </div>
-              <div className="stat-title">Node Runtime</div>
-              <div className="stat-value text-green-400">Node</div>
-              <div className="stat-desc">Server Efficiency</div>
-            </div>
 
-            <div className="stat">
-              <div className="stat-figure text-sky-400 text-6xl">
-                <FaReact />
+              <div className="stat">
+                <div className="stat-figure text-green-400 text-6xl">
+                  <FaNode />
+                </div>
+                <div className="stat-title">Node Runtime</div>
+                <div className="stat-value text-green-400">Node</div>
+                <div className="stat-desc">Server Efficiency</div>
               </div>
-              <div className="stat-title">React Framework</div>
-              <div className="stat-value text-sky-400">React</div>
-              <div className="stat-desc">Component Craft</div>
+
+              <div className="stat">
+                <div className="stat-figure text-sky-400 text-6xl">
+                  <FaReact />
+                </div>
+                <div className="stat-title">React Framework</div>
+                <div className="stat-value text-sky-400">React</div>
+                <div className="stat-desc">Component Craft</div>
+              </div>
             </div>
           </div>
 
@@ -351,102 +396,104 @@ export default function App() {
           </div>
 
           {/* Project Cards */}
-          <div className="divider  text-2xl font-bold my-10" id="project">
-            Projects
-          </div>
-          <div className="flex flex-col justify-center items-center">
-            <div className="flex gap-10 p-10 flex-wrap justify-between">
-              <div className="card bg-base-100 max-w-80 shadow-sm">
-                <figure>
-                  <img src={project_1} alt="Shoes" />
-                </figure>
-                <div className="card-body">
-                  <h2 className="card-title">
-                    Portfolio
-                    <div className="badge badge-primary">HTML</div>
-                    <div className="badge badge-secondary">CSS</div>
-                  </h2>
-                  <p>
-                    A card component has a figure, a body part, and inside body
-                    there are title and actions parts
-                  </p>
-                  <div className="card-actions justify-end">
-                    <div className="badge badge-outline">Github</div>
-                    <div className="badge badge-accent">Live Site</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="card bg-base-100 max-w-80 shadow-sm">
-                <figure>
-                  <img src={project_2} alt="Shoes" />
-                </figure>
-                <div className="card-body">
-                  <h2 className="card-title">
-                    Movie World
-                    <div className="badge badge-primary">HTML</div>
-                    <div className="badge badge-info">JS</div>
-                  </h2>
-                  <p>
-                    A card component has a figure, a body part, and inside body
-                    there are title and actions parts
-                  </p>
-                  <div className="card-actions justify-end">
-                    <div className="badge badge-outline">Github</div>
-                    <div className="badge badge-accent">Live Site</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="card bg-base-100 max-w-80 shadow-sm">
-                <figure>
-                  <img src={project_3} alt="Shoes" />
-                </figure>
-                <div className="card-body">
-                  <h2 className="card-title">
-                    Financial Tracker
-                    <div className="badge badge-primary">Node</div>
-                    <div className="badge badge-info">React</div>
-                  </h2>
-                  <p>
-                    A card component has a figure, a body part, and inside body
-                    there are title and actions parts
-                  </p>
-                  <div className="card-actions justify-end">
-                    <div className="badge badge-outline">Github</div>
-                    <div className="badge badge-accent">Live Site</div>
-                  </div>
-                </div>
-              </div>
+          <div className="px-4">
+            <div className="divider  text-2xl font-bold my-10" id="project">
+              Projects
             </div>
+            <div className="flex flex-col justify-center items-center">
+              <div className="flex gap-10 p-10 flex-wrap justify-center md:justify-around">
+                <div className="card bg-base-100 max-w-80 shadow-sm">
+                  <figure>
+                    <img src={project_1} alt="Shoes" />
+                  </figure>
+                  <div className="card-body">
+                    <h2 className="card-title">
+                      Portfolio
+                      <div className="badge badge-primary">HTML</div>
+                      <div className="badge badge-secondary">CSS</div>
+                    </h2>
+                    <p>
+                      A card component has a figure, a body part, and inside
+                      body there are title and actions parts
+                    </p>
+                    <div className="card-actions justify-end">
+                      <div className="badge badge-outline">Github</div>
+                      <div className="badge badge-accent">Live Site</div>
+                    </div>
+                  </div>
+                </div>
 
-            {/* pagination */}
-            <div className="join">
-              <input
-                className="join-item btn btn-square"
-                type="radio"
-                name="options"
-                aria-label="1"
-                checked="checked"
-              />
-              <input
-                className="join-item btn btn-square"
-                type="radio"
-                name="options"
-                aria-label="2"
-              />
-              <input
-                className="join-item btn btn-square"
-                type="radio"
-                name="options"
-                aria-label="3"
-              />
-              <input
-                className="join-item btn btn-square"
-                type="radio"
-                name="options"
-                aria-label="4"
-              />
+                <div className="card bg-base-100 max-w-80 shadow-sm">
+                  <figure>
+                    <img src={project_2} alt="Shoes" />
+                  </figure>
+                  <div className="card-body">
+                    <h2 className="card-title">
+                      Movie World
+                      <div className="badge badge-primary">HTML</div>
+                      <div className="badge badge-info">JS</div>
+                    </h2>
+                    <p>
+                      A card component has a figure, a body part, and inside
+                      body there are title and actions parts
+                    </p>
+                    <div className="card-actions justify-end">
+                      <div className="badge badge-outline">Github</div>
+                      <div className="badge badge-accent">Live Site</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="card bg-base-100 max-w-80 shadow-sm">
+                  <figure>
+                    <img src={project_3} alt="Shoes" />
+                  </figure>
+                  <div className="card-body">
+                    <h2 className="card-title">
+                      Financial Tracker
+                      <div className="badge badge-primary">Node</div>
+                      <div className="badge badge-info">React</div>
+                    </h2>
+                    <p>
+                      A card component has a figure, a body part, and inside
+                      body there are title and actions parts
+                    </p>
+                    <div className="card-actions justify-end">
+                      <div className="badge badge-outline">Github</div>
+                      <div className="badge badge-accent">Live Site</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* pagination */}
+              <div className="join">
+                <input
+                  className="join-item btn btn-square"
+                  type="radio"
+                  name="options"
+                  aria-label="1"
+                  checked="checked"
+                />
+                <input
+                  className="join-item btn btn-square"
+                  type="radio"
+                  name="options"
+                  aria-label="2"
+                />
+                <input
+                  className="join-item btn btn-square"
+                  type="radio"
+                  name="options"
+                  aria-label="3"
+                />
+                <input
+                  className="join-item btn btn-square"
+                  type="radio"
+                  name="options"
+                  aria-label="4"
+                />
+              </div>
             </div>
           </div>
 
