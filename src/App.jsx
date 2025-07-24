@@ -247,7 +247,7 @@ export default function App() {
             <div className="divider  text-2xl font-bold my-10" id="skills">
               Skills
             </div>
-            <div className="stats shadow w-full flex flex-wrap sm:grid">
+            <div className="stats shadow w-full stats-vertical md:stats-horizontal">
               <div className="stat">
                 <div className="stat-figure text-blue-700 text-6xl">
                   <FaHtml5 />
